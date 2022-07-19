@@ -14,9 +14,9 @@
 </head>
 <body>
   <main class="container">
-    <nav class="navbar indent">
+    <nav class="navbar indent flex">
       <img class="logo" src="images/logo.svg" alt="logo">
-      <div class="nav-btns">
+      <div class="nav-btns flex">
         <a href="#">Features</a>
         <a href="#">Team</a> 
         <a href="#">Sign In</a> 
@@ -30,7 +30,7 @@
         <p>Fylo stores your most important files in one secure location. 
         Access them wherever you need, share and collaborate with friends, 
         family, and co-workers.</p>
-        <form class="hero-email-form" action="#">
+        <form class="hero-email-form flex" action="#">
           <input type="email" name="email" value="Enter your email">
           <input type="submit" value="Get Started">
         </form>
@@ -46,7 +46,7 @@
         covered for all of your file storage needs.</p>
         <p>Securely share files and folders with friends, family and colleagues for 
         live collaboration. No email attachments required!</p>
-        <div class="fylo-arrow">
+        <div class="fylo-arrow flex">
           <p>See how Fylo works</p>
           <img src="images/icon-arrow.svg" alt="fylo arrow">
         </div>
@@ -55,7 +55,7 @@
           <img class="test-quote" src="images/icon-quotes.svg" alt="quotes">
           <p>Fylo has improved our team productivity by an order of magnitude. Since 
           making the switch our team has become a well-oiled collaboration machine.</p>
-          <div class="avatar">
+          <div class="avatar flex">
             <img class="avatar-pic" src="images/avatar-testimonial.jpg" alt="avatar">
             <div class="avatar-info">
               <h3>Kyle Burton</h3>
@@ -72,44 +72,50 @@
         <p>It only takes a minute to sign up and our free starter tier is extremely generous. 
         If you have any questions, our support team would be happy to help you.</p>
       </div>
-      <form class="contact-form" action="#">
+      <form class="contact-form flex" action="#">
         <input type="email" name="email" value="email@example.com">
         <input type="submit" value="Get Started For Free">
       </form>
       
     </section>
     
-    <footer class="footer indent">
-      <div class="footer-contact">
-        <img class="footer-logo" src="images/logo.svg" alt="logo">
-        <div class="footer-phone">
+    <footer class="footer indent flex">
+      <div class="footer-contact flex">
+        <img class="footer-logo" src="images/logo-footer.svg" alt="logo">
+        <div class="footer-phone flex">
           <img src="images/icon-phone.svg" alt="phone pic">
           <p>Phone: +1-543-123-4567</p>
         </div>
-        <div class="footer-email">
+        <div class="footer-email flex">
           <img src="images/icon-email.svg" alt="email pic">
           <p>example@fylo.com</p>
         </div>
       </div>
 
-      <div class="footer-about-row">
+      <div class="footer-about-row flex">
         <a href="#">About Us</a>
         <a href="#">Jobs</a>
         <a href="#">Press</a>
         <a href="#">Blog</a>
       </div>
 
-      <div class="footer-contact-row">
+      <div class="footer-contact-row flex">
         <a href="#">Contact Us</a>
         <a href="#">Terms</a>
         <a href="#">Privacy</a>
       </div>
 
-      <div class="footer-social-links-row">
-        <div class="social-links">
-          <i class="fa-brands fa-facebook-f"></i>
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa-brands fa-instagram"></i>
+      <div class="footer-social-links-row flex">
+        <div class="social-links flex">
+          <div class="fa-container">
+            <i class="fa-brands fa-facebook-f"></i>
+          </div>
+          <div class="fa-container">
+            <i class="fa-brands fa-twitter"></i>
+          </div>
+          <div class="fa-container">
+            <i class="fa-brands fa-instagram"></i>
+          </div>                              
         </div>
         <div class="attribution">
           Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.<br>

@@ -105,11 +105,18 @@ input[type="submit"]{
     padding: .8rem 1.5rem;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 a{
     color: black;
     text-decoration: none;
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+
+.flex{
+    display: flex;
 }
 
 .container{
@@ -124,7 +131,6 @@ a{
 }
 
 .navbar{
-    display: flex;
     justify-content: space-between;
     align-items: center;    
 }
@@ -135,7 +141,6 @@ a{
 
 .nav-btns{
     font-size: .8rem;
-    display: flex;
     gap: 1.5rem;
 }
 
@@ -149,7 +154,6 @@ a{
 }
 
 .hero-email-form{
-    display: flex;
     flex-direction: column;
     gap: 1rem;
 }
@@ -170,6 +174,7 @@ a{
     position: relative;
     z-index: 10;
     background-image: linear-gradient(var(--light-grayish-blue), white);
+    margin-bottom: 4rem;
 }
 
 .mobile-bg{
@@ -198,13 +203,13 @@ a{
 }
 
 .fylo-arrow{
-    display: flex;
     width: 39%;
     align-items: center;
     margin-inline: auto;
     gap: .5rem;
     border-bottom: 1px solid var(--moderate-cyan);
     padding-bottom: .2rem;
+    cursor: pointer;
 }
 
 .testimonial{
@@ -226,7 +231,6 @@ a{
 }
 
 .avatar{
-    display: flex;
     align-items: center;
     gap: 1rem;
 }
@@ -247,8 +251,103 @@ a{
 
 .contact{
     background-color: var(--desaturated-blue);
+    padding: 5rem 2rem;
+}
+
+.contact-info{
+    text-align: center;
+}
+
+.contact-info h2,
+.contact-info p{
+    color: white;
+    padding-bottom: 2rem;
+}
+
+.contact-form{
+    width: 80%;
+    margin-inline: auto;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input[type="email"]{
+    color: var(--light-gray);
+    font-size: .8rem;
+    padding: .7rem .5rem;
+    border-radius: 5px;
+}
+
+.contact-form input[type="submit"]{
+    font-size: .8rem;
 }
 
 .footer{
     background-color: var(--very-dark-blue);
+    color: white;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.footer-logo{
+    width: 50%;
+    fill: white;
+    margin: 3rem 0;
+}
+
+.footer-contact,
+.footer-about-row,
+.footer-contact-row,
+.footer-social-links-row{
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-phone,
+.footer-email{
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-social-links-row{
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links{
+    gap: 1rem;
+}
+
+.fa-container{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+
+.fa-container:hover{
+    color: var(--bright-blue);
+    border: 1px solid var(--bright-blue);
+}
+
+.fa-brands{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.footer a{
+    color: white;
+}
+
+a:hover{
+    color: var(--bright-blue);
+}
+
+.attribution{
+    text-align: center;
 }
