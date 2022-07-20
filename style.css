@@ -115,6 +115,10 @@ a{
     transition: .2s ease-in;
 }
 
+::placeholder{
+    color: var(--light-gray);
+}
+
 .flex{
     display: flex;
 }
@@ -158,12 +162,34 @@ a{
     gap: 1rem;
 }
 
-.hero-email-form input[type="email"]{
-    color: var(--light-gray);
+.email-error-check{
+    position: relative;
+    width: 100%;
+}
+
+.email-error,
+.hero-success{
+    position: absolute;
+    color: red;
+    top: 28%;
+    left: 0;
+    font-size: .8rem;
+    opacity: 0;
+    transition: .2s ease-in;
+}
+
+.hero-success{
+    color: black;
+}
+
+.hero-email{
+    width: 100%;
+    color: black;
     font-size: .8rem;
     padding: .8rem 1.5rem;
     border: 1px solid black;
     border-radius: 5px;
+    transition: .2s ease-in;
 }
 
 .full-width{
@@ -185,31 +211,42 @@ a{
     z-index: -1;
 }
 
+.desktop-bg{
+    position: absolute;
+    height: 12%;
+    top: -60px;
+    left: 0;
+    z-index: -1;
+    display: none;
+}
+
 .info-placer h2{
     font-size: 1rem;
     text-align: center;
     padding-bottom: 2rem;
 }
 
-.info-placer p{
+.info-placer-p{
     padding-bottom: 2rem;
     color: var(--desaturated-blue);
 }
 
-.fylo-arrow p{
-    padding: 0;
+.fylo-arrow{
+    position: relative;
+    width: 136px;
+    margin-inline: auto;
+    padding-bottom: 0;
     color: var(--moderate-cyan);
     font-size: .8rem;
+    border-bottom: 1px solid var(--moderate-cyan);
+    cursor: pointer;
 }
 
-.fylo-arrow{
-    width: 39%;
-    align-items: center;
-    margin-inline: auto;
-    gap: .5rem;
-    border-bottom: 1px solid var(--moderate-cyan);
-    padding-bottom: .2rem;
-    cursor: pointer;
+.fylo-arrow::after{
+    position: absolute;
+    content: url(images/icon-arrow.svg);
+    top: 15%;
+    right: 0;
 }
 
 .testimonial{
@@ -271,15 +308,36 @@ a{
     gap: 1rem;
 }
 
-.contact-form input[type="email"]{
-    color: var(--light-gray);
+.contact-form-email{
+    width: 100%;
+    color: black;
     font-size: .8rem;
     padding: .7rem .5rem;
+    border: 1px solid black;
     border-radius: 5px;
+}
+
+.contact-email-error,
+.contact-success{
+    position: absolute;
+    color: white;
+    top: 95%;
+    left: 0;
+    font-size: .8rem;
+    opacity: 0;
+    transition: .2s ease-in;
 }
 
 .contact-form input[type="submit"]{
     font-size: .8rem;
+}
+
+.email-warning{
+    border-color: red;
+}
+
+.active{
+    opacity: 1;
 }
 
 .footer{
@@ -287,6 +345,12 @@ a{
     color: white;
     flex-direction: column;
     gap: 3rem;
+}
+
+.desktop-footer-flex{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .footer-logo{
@@ -350,4 +414,128 @@ a:hover{
 
 .attribution{
     text-align: center;
+    font-size: .8rem;
+    line-height: 2.5;
+}
+
+input:focus-visible{
+    outline: 1px solid red;
+}
+
+@media (min-width: 950px){    
+    .container{
+        max-width: 980px;
+        width: 80%;
+    }    
+
+    .indent{
+        padding: 4rem;
+    }
+
+    .mobile-bg{
+        display: none;
+    }
+
+    .desktop-bg{
+        display: block;
+    }
+
+    .hero,
+    .info-section{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .hero{
+        margin-top: 0;
+    }
+
+    .hero-placer,
+    .info-placer{
+        text-align: left;
+    }
+
+    .hero-placer h1{
+        font-size: 1.8rem;
+    }
+
+    .hero-email-form{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .hero-email-form input[type="submit"]{
+        width: 35%;
+        font-size: .8rem;
+    }
+
+    .hero-pic,
+    .hero-placer{
+        width: 50%;
+    }
+
+    .info-pic,
+    .contact-form{
+        width: 45%
+    }
+
+    .info-placer,
+    .contact-info{
+        width: 55%;
+        padding-right: 0;
+        text-align: left;
+    }
+
+    .info-pic{
+        padding: 0;
+    }
+
+    .info-section{
+        gap: 1rem;
+    }
+
+    .info-placer h2{
+        font-size: 1.8rem;
+        text-align: left;
+    }
+
+    .fylo-arrow,
+    .testimonial{
+        margin: 0;
+    }
+
+    .fylo-arrow{
+        margin-bottom: 2rem;
+    }
+
+    .contact{
+        display: flex;
+        gap: 1rem;
+    }
+
+    .contact-form input[type="submit"]{
+        width: 180px;
+    }
+
+    .footer{
+        gap: 1rem;
+    }
+
+    .footer-logo,
+    .logo{
+        margin: 0;
+        width: 120px;
+    }
+
+    .desktop-footer-flex{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .attribution{
+        text-align: left;
+    }
 }

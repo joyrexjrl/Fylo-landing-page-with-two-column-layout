@@ -9,6 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css"> 
   <script src="https://kit.fontawesome.com/532e282bae.js" crossorigin="anonymous"></script> 
+  <script src="validation.js" defer></script>
   <title>Frontend Mentor | Fylo landing page with two column layout</title>
 
 </head>
@@ -30,26 +31,28 @@
         <p>Fylo stores your most important files in one secure location. 
         Access them wherever you need, share and collaborate with friends, 
         family, and co-workers.</p>
-        <form class="hero-email-form flex" action="#">
-          <input type="email" name="email" value="Enter your email">
-          <input type="submit" value="Get Started">
+        <form class="hero-email-form flex" name="form" action="#">
+          <div class="email-error-check">
+            <input class="hero-email hero-focus" type="email" name="email" placeholder="Enter your email">
+            <p class="email-error">Please check your email</p>
+            <p class="hero-success">Thank you for signing up</p>
+          </div>          
+          <input type="submit" name="submit" value="Get Started" onclick="ValidateEmailHero(document.form.email);return false;">
         </form>
       </div>      
     </section>
 
     <section class="info-section">
       <img class="mobile-bg" src="images/bg-curve-mobile.svg" alt="mobile bg">
+      <img class="desktop-bg" src="images/bg-curve-desktop.svg" alt="desktop bg">
       <img class="info-pic indent" src="images/illustration-2.svg" alt="info pic">
       <div class="info-placer indent">
         <h2>Stay productive, wherever you are</h2>
-        <p>Never let location be an issue when accessing your files. Fylo has you 
+        <p class="info-placer-p">Never let location be an issue when accessing your files. Fylo has you 
         covered for all of your file storage needs.</p>
-        <p>Securely share files and folders with friends, family and colleagues for 
-        live collaboration. No email attachments required!</p>
-        <div class="fylo-arrow flex">
-          <p>See how Fylo works</p>
-          <img src="images/icon-arrow.svg" alt="fylo arrow">
-        </div>
+        <p class="info-placer-p">Securely share files and folders with friends, family and colleagues for 
+        live collaboration. No email attachments required!</p>        
+        <p class="fylo-arrow">See how Fylo works</p>
 
         <div class="testimonial">
           <img class="test-quote" src="images/icon-quotes.svg" alt="quotes">
@@ -72,56 +75,63 @@
         <p>It only takes a minute to sign up and our free starter tier is extremely generous. 
         If you have any questions, our support team would be happy to help you.</p>
       </div>
-      <form class="contact-form flex" action="#">
-        <input type="email" name="email" value="email@example.com">
-        <input type="submit" value="Get Started For Free">
+      <form class="contact-form flex" name="contactForm" action="#">
+        <div class="email-error-check">
+          <input class="contact-form-email contact-focus" type="email" name="contactEmail" placeholder="email@example.com">
+          <p class="contact-email-error">Please check your email</p>
+          <p class="contact-success">Thank you for signing up</p>
+        </div>        
+        <input type="submit" name="submit-contact" value="Get Started For Free" onclick="ValidateEmailContact(document.contactForm.contactEmail);return false;">
       </form>
       
     </section>
     
     <footer class="footer indent flex">
-      <div class="footer-contact flex">
-        <img class="footer-logo" src="images/logo-footer.svg" alt="logo">
-        <div class="footer-phone flex">
-          <img src="images/icon-phone.svg" alt="phone pic">
-          <p>Phone: +1-543-123-4567</p>
-        </div>
-        <div class="footer-email flex">
-          <img src="images/icon-email.svg" alt="email pic">
-          <p>example@fylo.com</p>
-        </div>
-      </div>
-
-      <div class="footer-about-row flex">
-        <a href="#">About Us</a>
-        <a href="#">Jobs</a>
-        <a href="#">Press</a>
-        <a href="#">Blog</a>
-      </div>
-
-      <div class="footer-contact-row flex">
-        <a href="#">Contact Us</a>
-        <a href="#">Terms</a>
-        <a href="#">Privacy</a>
-      </div>
-
-      <div class="footer-social-links-row flex">
-        <div class="social-links flex">
-          <div class="fa-container">
-            <i class="fa-brands fa-facebook-f"></i>
+      <img class="footer-logo" src="images/logo-footer.svg" alt="logo">
+      <div class="desktop-footer-flex">
+        <div class="footer-contact flex">        
+          <div class="footer-phone flex">
+            <img src="images/icon-phone.svg" alt="phone pic">
+            <p>Phone: +1-543-123-4567</p>
           </div>
-          <div class="fa-container">
-            <i class="fa-brands fa-twitter"></i>
+          <div class="footer-email flex">
+            <img src="images/icon-email.svg" alt="email pic">
+            <p>example@fylo.com</p>
           </div>
-          <div class="fa-container">
-            <i class="fa-brands fa-instagram"></i>
-          </div>                              
         </div>
-        <div class="attribution">
-          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.<br>
-          Coded by <a href="https://www.frontendmentor.io/profile/joyrexjrl" target="_blank">Rick Lozano</a>.
+
+        <div class="footer-about-row flex">
+          <a href="#">About Us</a>
+          <a href="#">Jobs</a>
+          <a href="#">Press</a>
+          <a href="#">Blog</a>
+        </div>
+
+        <div class="footer-contact-row flex">
+          <a href="#">Contact Us</a>
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+        </div>
+
+        <div class="footer-social-links-row flex">
+          <div class="social-links flex">
+            <div class="fa-container">
+              <i class="fa-brands fa-facebook-f"></i>
+            </div>
+            <div class="fa-container">
+              <i class="fa-brands fa-twitter"></i>
+            </div>
+            <div class="fa-container">
+              <i class="fa-brands fa-instagram"></i>
+            </div>                              
+          </div>
+          <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.<br>
+            Coded by <a href="https://www.frontendmentor.io/profile/joyrexjrl" target="_blank">Rick Lozano</a>.
+          </div>
         </div>
       </div>
+      
 
     </footer>
   </main>  
